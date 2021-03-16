@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ProfileInfoModel {
+public class ProfileModel {
 	
 	private Integer id;
 	private String currentOccupation;

@@ -9,12 +9,10 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class JobFieldModel {
+public class UserRoleModel {
+
 	private Integer id;
-	private Integer jobId;
-	private Integer fieldId;
-	
-	private JobModel jobModel;
-	private FieldModel fieldModel;
+	private Integer userId;
+	private Integer roleId;
 
 }

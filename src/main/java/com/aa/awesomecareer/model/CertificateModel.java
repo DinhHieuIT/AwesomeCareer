@@ -2,8 +2,6 @@ package com.aa.awesomecareer.model;
 
 import java.util.Date;
 
-import com.aa.awesomecareer.entity.User;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,5 +16,4 @@ public class CertificateModel {
 	private Integer userId;
 	private String title;
 	private Date issuedTime;
-	private User user;
 }
