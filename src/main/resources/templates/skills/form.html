@@ -10,6 +10,7 @@
    <div th:id="'skill-'+${userModel.id}">
 	<form th:action="@{'/user/'+${userModel.id}+'/skill'}" th:method="POST" th:id="'_skill-'+${userModel.id}+'-form'" 
 	 th:object="${userModel}">
+	 
 		    <label>Skills:</label>
 		    <th:block th:each="skillModel:${skillModels}">
 
