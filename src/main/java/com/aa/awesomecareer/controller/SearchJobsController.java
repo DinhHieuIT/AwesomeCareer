@@ -28,7 +28,8 @@ public class SearchJobsController {
 	@GetMapping(value="/search", produces = {MediaType.APPLICATION_JSON_VALUE})
 	@ResponseBody
 	@ResponseStatus(code = HttpStatus.OK)
-	public List<JobModel> showSearch(@RequestParam String term, Model model, final RedirectAttributes redirectAttributes,
+	public List<JobModel> showSearch(@RequestParam String term, Model model, 
+			final RedirectAttributes redirectAttributes,
 			HttpServletRequest request) throws Exception {
 		List<JobModel> jobModels = jobService.findAllJobSearch(term);
 		System.out.println("Da chay den day chua");

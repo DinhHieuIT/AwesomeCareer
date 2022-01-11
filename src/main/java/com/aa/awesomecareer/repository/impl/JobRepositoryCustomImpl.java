@@ -33,7 +33,8 @@ public class JobRepositoryCustomImpl implements JobRepositoryCustom {
 	
 	@Override
 	public List<Job> findJobByKeyword(String keyword) {
-		TypedQuery<Job> query = entityManager.createQuery("FROM Job job WHERE position LIKE :keyword", Job.class);
+		TypedQuery<Job> query = entityManager
+		.createQuery("FROM Job job WHERE position LIKE :keyword", Job.class);
 		query.setParameter("keyword", '%'+keyword+'%');
 		return query.getResultList();
 	}

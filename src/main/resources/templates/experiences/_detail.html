@@ -11,7 +11,8 @@
 				th:id="'experience-edit-'+${experience.id}"
 				th:data-experience_id="${experience.id}">Edit</a>
 			<p th:text="${experience.companyName}"></p>
-			<span th:text="${#dates.format(experience.startTime, 'MM/dd/yyyy')}"></span> <span>-</span> <span
+			<span th:text="${#dates.format(experience.startTime, 'MM/dd/yyyy')}">
+			</span> <span>-</span> <span
 				th:text="${#dates.format(experience.endTime, 'MM/dd/yyyy')}"></span>
 			<p th:text="${experience.jobTitle}"></p>
 			<p th:text="${experience.description}"></p>

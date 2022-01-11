@@ -21,8 +21,8 @@ public class SkillsController {
 	UserService userService;
 	
 	@PostMapping(value = "/user/{id}/skill")
-	public String addSkill(@PathVariable("id") Integer id, @ModelAttribute UserModel userModel, Model model,
-			HttpServletRequest request) {
+	public String addSkill(@PathVariable("id") Integer id,
+	@ModelAttribute UserModel userModel, Model model,HttpServletRequest request) {
 		userModel.setId(1);
 		userService.saveSkill(userModel);
 		return "redirect: " + request.getContextPath() + "/user/" + userModel.getId();

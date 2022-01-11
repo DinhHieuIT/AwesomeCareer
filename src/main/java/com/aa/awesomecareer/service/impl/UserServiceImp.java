@@ -217,7 +217,8 @@ public class UserServiceImp implements UserService {
 	}
 
 	@Override
-	public void updateResetPasswordToken(String token, String email) throws EntityNotFoundException {
+	public void updateResetPasswordToken(String token, String email) 
+			throws EntityNotFoundException {
 		User user = userRepository.findByEmail(email);
 		if(user != null) {
 			user.setToken(token);

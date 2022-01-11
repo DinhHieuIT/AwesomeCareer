@@ -72,7 +72,8 @@ public class EmailSenderServiceImp implements EmailSenderService {
     
     
     @Override
-    public void sendEmailWithLink (String recipientEmail, String link) throws MessagingException, UnsupportedEncodingException{
+    public void sendEmailWithLink (String recipientEmail, String link) 
+    		throws MessagingException, UnsupportedEncodingException{
     	logger.info("Sending email to recipient");
     	try {
     	MimeMessage message = javaMailSender.createMimeMessage();

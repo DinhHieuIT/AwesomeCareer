@@ -35,7 +35,9 @@ public class ForgotPasswordController {
 	}
 	
 	@PostMapping("/forgot_password")
-	public String processForgotPassword(@RequestParam("email") String email,HttpServletRequest request, Model model) {
+	public String processForgotPassword(@RequestParam("email") String email,
+			HttpServletRequest request, Model model) {
+		
 		String token = RandomString.make(25);
 		
 		userService.updateResetPasswordToken(token, email);

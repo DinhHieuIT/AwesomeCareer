@@ -8,7 +8,8 @@
 <body>
    <th:block th:fragment="copy">
    <div th:id="'skill-'+${userModel.id}">
-	<form th:action="@{'/user/'+${userModel.id}+'/skill'}" th:method="POST" th:id="'_skill-'+${userModel.id}+'-form'" 
+	<form th:action="@{'/user/'+${userModel.id}+'/skill'}" th:method="POST" 
+	th:id="'_skill-'+${userModel.id}+'-form'" 
 	 th:object="${userModel}">
 	
 		    <th:block th:each="skillModel:${skillModels}">

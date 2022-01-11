@@ -22,7 +22,8 @@ public class SkillUserRepositoryCustomImpl implements SkillUserRepositoryCustom 
 	
 	@Override
 	public List<SkillUser> findByUserId(Integer userId) {
-		TypedQuery<SkillUser> query = entityManager.createQuery("FROM SkillUser skilluser WHERE skilluser.userId = :userId", SkillUser.class);
+		TypedQuery<SkillUser> query = entityManager
+	.createQuery("FROM SkillUser skilluser WHERE skilluser.userId = :userId", SkillUser.class);
 		query.setParameter("userId", userId);
 		return query.getResultList();
 	}

@@ -59,8 +59,9 @@ public class JobsController {
 	}
 	
 	@PostMapping (value="/jobs")
-	public String saveJobForm(@ModelAttribute("jobModel") JobModel jobModel,@RequestParam("image") MultipartFile image,
-			Model model,HttpServletRequest request,RedirectAttributes redirectAttributes) {
+	public String saveJobForm(@ModelAttribute("jobModel") JobModel jobModel,
+			@RequestParam("image") MultipartFile image,Model model,
+			HttpServletRequest request,RedirectAttributes redirectAttributes) {
 		if (image.isEmpty()) {
             redirectAttributes.addFlashAttribute("message", "Please select a file to upload");
             return "redirect:uploadStatus";
